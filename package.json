@@ -1,0 +1,52 @@
+{
+  "name": "tokiforge",
+  "version": "1.0.0",
+  "description": "Modern Design Token & Theme Engine",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:core && npm run build:rest",
+    "build:core": "npm run build --workspace @tokiforge/core",
+    "build:rest": "npm run build --workspace @tokiforge/react --workspace @tokiforge/vue --workspace @tokiforge/svelte --workspace tokiforge-cli",
+    "dev": "npm run dev --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
+    "docs:dev": "cd docs && npm install && npm run dev",
+    "docs:build": "cd docs && npm install && npm run build",
+    "docs:preview": "cd docs && npm run preview"
+  },
+  "keywords": [
+    "design-tokens",
+    "theme-engine",
+    "theming",
+    "css-variables",
+    "design-system",
+    "theme-switching",
+    "runtime-theming",
+    "framework-agnostic",
+    "react",
+    "vue",
+    "svelte",
+    "typescript",
+    "cli",
+    "token-parser",
+    "token-export",
+    "light-dark-theme",
+    "accessibility",
+    "frontend",
+    "developer-tools"
+  ],
+  "author": "TokiForge Community",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
