@@ -1,0 +1,41 @@
+{
+  "name": "@tokiforge/core",
+  "version": "1.0.0",
+  "description": "Core design token engine for TokiForge",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "design-tokens",
+    "theme-engine",
+    "css-variables",
+    "theming",
+    "token-parser",
+    "token-export",
+    "runtime-theming",
+    "framework-agnostic"
+  ],
+  "author": "TokiForge Community",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "yaml": "^2.3.4"
+  }
+}
+
