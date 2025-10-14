@@ -1,0 +1,43 @@
+{
+  "name": "@tokiforge/svelte",
+  "version": "1.0.0",
+  "description": "Svelte adapter for TokiForge theming",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "svelte": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external svelte",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch --external svelte",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "svelte": ">=3.0.0",
+    "@tokiforge/core": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@tokiforge/core": "^1.0.0"
+  },
+  "keywords": [
+    "svelte",
+    "theming",
+    "design-tokens"
+  ],
+  "author": "TokiForge Community",
+  "license": "MIT"
+}
+
