@@ -31,7 +31,13 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Build core package
+        run: npm run build:core
+
+      - name: Install documentation dependencies
         run: |
           cd documentation
           echo "Current directory: $(pwd)"
